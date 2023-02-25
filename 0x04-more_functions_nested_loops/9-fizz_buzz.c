@@ -1,21 +1,34 @@
-#include "main.h"
-
+#include <stdio.h>
 /**
-* print_square - prints hashes squares
-* @size: size of the square
-* Return: no return
+*main - program that prints either number
+*or fizz or buzz or fizzBuzz
+*
+*
+*Return: returns 0
 */
-void print_square(int size)
+int main(void)
 {
-int i, j;
-for (i = 0; i < size; i++)
+int num;
+while (num++ < 100)
+
+if ((num % 3 == 0) && (num % 5 == 0))
+printf("FizzBuzz ");
+
+else if ((num % 3) == 0)
+printf("Fizz ");
+
+else if ((num % 5) == 0)
 {
-for (j = 0; j < size; j++)
-{
-_putchar(35);
+if (num != 100)
+printf("Buzz ");
+
+else
+printf("Buzz");
 }
-if (i != size - 1)
-_putchar('\n');
-}
-_putchar('\n');
+
+else
+printf("%d ", num);
+
+printf("\n");
+return (0);
 }
